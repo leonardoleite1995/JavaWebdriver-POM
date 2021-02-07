@@ -1,1 +1,1 @@
-## Teste Inmetrics - Descrever como executar o projeto
+## Descrever como executar o projeto
