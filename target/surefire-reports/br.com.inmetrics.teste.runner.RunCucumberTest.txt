@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: br.com.inmetrics.teste.runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 15.437 sec <<< FAILURE!
+Login(Login)  Time elapsed: 14.145 sec  <<< ERROR!
+io.cucumber.java.PendingException: TODO: implement me
+	at br.com.inmetrics.teste.stepDefinitions.LoginSteps.o_login_e_realizado_com_sucesso(LoginSteps.java:26)
+	at ✽.o login e realizado com sucesso(file:///home/leonardo/desenvolvimento/teste-inmetrics/src/test/java/br/com/inmetrics/teste/features/login.feature:10)
+
