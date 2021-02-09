@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class MainPage {
     public static WebDriver driver;
 
-    public void openWebsite() {
-        driver.get("https://inm-test-app.herokuapp.com/accounts/login/");
+    public void openWebsite(String url) {
+        driver.get(url);
     }
 }

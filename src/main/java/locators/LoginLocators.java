@@ -10,4 +10,5 @@ public class LoginLocators {
     private By buttonEntrar = By.className("login100-form-btn");
     private By divAlert = By.cssSelector("div.alert");
     private By linkCadastreSe = By.cssSelector("a[href='/accounts/signup/']");
+    private By spanFormTitle = By.cssSelector("span.login100-form-title");
 }

@@ -10,6 +10,5 @@ import org.junit.runner.RunWith;
         glue = {"br.com.inmetrics.teste.stepDefinitions"},
         monochrome = true
 )
-
 public class RunCucumberTest {
 }

@@ -17,15 +17,15 @@ public class LoginSteps {
     FuncionariosPage funcionariosPage = new FuncionariosPage();
 
     @Before
-    public void setupBrowser() {
+    public static void setupBrowser() {
         System.setProperty("webdriver.chrome.driver", "src/main/java/driver/chromedriver");
         if (MainPage.driver == null)
             MainPage.driver = (new ChromeDriver());
     }
 
-    @Dado("que vou para a pagina de login")
-    public void que_vou_para_a_pagina_de_login() {
-        page.openWebsite();
+    @Dado("que vou para a pagina {string}")
+    public void que_vou_para_a_pagina_de_login(String url) {
+        page.openWebsite(url);
     }
 
     @Dado("faco login:")

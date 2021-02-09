@@ -14,7 +14,11 @@ public class LoginPage extends MainPage {
         driver.findElement(pageLocators.getButtonEntrar()).click();
     }
 
-    public String getDivAlertText(){
+    public String getDivAlertText() {
         return driver.findElement(pageLocators.getDivAlert()).getText();
+    }
+
+    public String getSpanFormTitletext() {
+        return driver.findElement(pageLocators.getSpanFormTitle()).getText();
     }
 }
