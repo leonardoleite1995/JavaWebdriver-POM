@@ -1,12 +1,12 @@
 package pages;
 
-import locators.LoginPageLocators;
+import locators.LoginLocators;
 import lombok.Data;
 
 @Data
 public class LoginPage extends MainPage {
 
-    private LoginPageLocators pageLocators = new LoginPageLocators();
+    private LoginLocators pageLocators = new LoginLocators();
 
     public void preencheFormLogin(String usuario, String senha) {
         driver.findElement(pageLocators.getInputUsuario()).sendKeys(usuario);

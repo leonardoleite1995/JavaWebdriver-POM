@@ -1,7 +1,6 @@
 package br.com.inmetrics.teste.stepDefinitions;
 
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import org.junit.Assert;

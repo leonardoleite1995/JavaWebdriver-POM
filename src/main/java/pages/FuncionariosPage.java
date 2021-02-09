@@ -1,12 +1,12 @@
 package pages;
 
-import locators.FuncionariosPageLocators;
+import locators.FuncionariosLocators;
 import lombok.Data;
 
 @Data
 public class FuncionariosPage extends MainPage {
 
-    private FuncionariosPageLocators pageLocators = new FuncionariosPageLocators();
+    private FuncionariosLocators pageLocators = new FuncionariosLocators();
 
     public Boolean getTableFuncionarios() {
         return driver.findElement(pageLocators.getTableFuncionarios()).isDisplayed();
