@@ -1,19 +1,14 @@
 package pages;
 
-import locators.MainPageLocators;
 import lombok.Data;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 
 @Data
 public class MainPage {
+    public static WebDriver driver;
 
-    private WebDriver driver;
-
-    public void openWebsite(){
-        System.setProperty("webdriver.chrome.driver","src/main/java/driver/chromedriver");
-        driver = new ChromeDriver();
+    public void openWebsite() {
         driver.get("https://inm-test-app.herokuapp.com/accounts/login/");
     }
-
 }

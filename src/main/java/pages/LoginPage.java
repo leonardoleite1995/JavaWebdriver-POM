@@ -1,17 +1,20 @@
 package pages;
 
-import locators.MainPageLocators;
+import locators.LoginPageLocators;
 import lombok.Data;
 
 @Data
 public class LoginPage extends MainPage {
 
-    private MainPageLocators pageLocators = new MainPageLocators();
+    private LoginPageLocators pageLocators = new LoginPageLocators();
 
     public void preencheFormLogin(String usuario, String senha) {
-        getDriver().findElement(pageLocators.getInputUsuario()).sendKeys(usuario.toString());
-        getDriver().findElement(pageLocators.getInputSenha()).sendKeys(senha.toString());
-        //getDriver().close();
+        driver.findElement(pageLocators.getInputUsuario()).sendKeys(usuario);
+        driver.findElement(pageLocators.getInputSenha()).sendKeys(senha);
+        driver.findElement(pageLocators.getButtonEntrar()).click();
     }
 
+    public String getDivAlertText(){
+        return driver.findElement(pageLocators.getDivAlert()).getText();
+    }
 }

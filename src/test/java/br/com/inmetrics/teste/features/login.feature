@@ -1,14 +1,15 @@
 #language: pt
 Funcionalidade: Login
 
-  Esquema do Cenario: Login
+  Esquema do Cenario: Login - <cenario>
 
     Dado que vou para a pagina de login
     E faco login:
       | usuario | <usuario> |
       | senha   | <senha>   |
-    Entao o login e realizado com sucesso
+    Entao o login e realizado com "<cenario>"
 
     Exemplos:
-      | usuario | senha |
-      | teste   | teste |
+      | cenario | usuario | senha        |
+      | sucesso | teste   | teste        |
+      | falha   | teste   | sdfsdfsfdsdf |

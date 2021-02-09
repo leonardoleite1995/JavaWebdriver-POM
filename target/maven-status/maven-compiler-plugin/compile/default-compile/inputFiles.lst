@@ -1,4 +1,6 @@
-/home/leonardo/desenvolvimento/teste-inmetrics/src/main/java/locators/MainPageLocators.java
+/home/leonardo/desenvolvimento/teste-inmetrics/src/main/java/locators/LoginPageLocators.java
+/home/leonardo/desenvolvimento/teste-inmetrics/src/main/java/pages/FuncionariosPage.java
 /home/leonardo/desenvolvimento/teste-inmetrics/src/main/java/pages/LoginPage.java
 /home/leonardo/desenvolvimento/teste-inmetrics/src/main/java/pages/MainPage.java
 /home/leonardo/desenvolvimento/teste-inmetrics/src/main/java/LoginExecution.java
+/home/leonardo/desenvolvimento/teste-inmetrics/src/main/java/locators/FuncionariosPageLocators.java
