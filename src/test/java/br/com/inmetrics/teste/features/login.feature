@@ -7,9 +7,10 @@ Funcionalidade: Login
     E faco login:
       | usuario | <usuario> |
       | senha   | <senha>   |
-    Entao o login e realizado com "<cenario>"
+    Entao o login e realizado com "<cenario>":
+      | mensagem | <mensagem> |
 
     Exemplos:
-      | cenario | usuario | senha        |
-      | sucesso | teste   | teste        |
-      | falha   | teste   | sdfsdfsfdsdf |
+      | cenario | usuario | senha        | mensagem                         |
+      | sucesso | teste   | teste        |                                  |
+      | falha   | teste   | sdfsdfsfdsdf | LOGIN_USUARIO_OU_SENHA_INVALIDOS |

@@ -1,5 +1,7 @@
 package br.com.inmetrics.teste.stepDefinitions;
 
+import dataGenerator.MensagemGenerator;
+import dto.Mensagem;
 import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
@@ -33,13 +35,14 @@ public class LoginSteps {
         page.preencheFormLogin(login.get("usuario"), login.get("senha"));
     }
 
-    @Entao("o login e realizado com {string}")
-    public void o_login_e_realizado_com_sucesso(String cenario) {
+    @Entao("o login e realizado com {string}:")
+    public void o_login_e_realizado_com_sucesso(String cenario, Map<String,String> dataTable) {
         if (cenario.equals("sucesso")) {
             Assert.assertTrue(funcionariosPage.getTableFuncionarios());
             funcionariosPage.sair();
         } else {
-            Assert.assertEquals(page.getDivAlertText(), "ERRO! Usuário ou Senha inválidos\n" + "×");
+            Mensagem mensagem = MensagemGenerator.valueOf(dataTable.get("mensagem")).msg();
+            Assert.assertEquals(page.driver.findElement(mensagem.getLocator()).getText(), mensagem.getMsg());
         }
     }
 }
