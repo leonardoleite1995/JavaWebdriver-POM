@@ -1,17 +1,17 @@
 package dataGenerator;
 
 import com.github.javafaker.Faker;
-import dto.Usuario;
+import dto.UsuarioDTO;
 
 import java.util.Locale;
 
 public enum UsuarioGenerator {
     USUARIO_SIMPLES {
         @Override
-        public Usuario pojo() {
+        public UsuarioDTO pojo() {
             Faker faker = new Faker(new Locale("en"));
             String username = faker.name().username();
-            return Usuario.builder()
+            return UsuarioDTO.builder()
                     .username(username)
                     .password(username.concat("123"))
                     .confirmPassword(username.concat("123"))
@@ -20,10 +20,10 @@ public enum UsuarioGenerator {
     },
     SENHA_DIFERENTE_CONFIRMACAO {
         @Override
-        public Usuario pojo() {
+        public UsuarioDTO pojo() {
             Faker faker = new Faker(new Locale("en"));
             String username = faker.name().username();
-            return Usuario.builder()
+            return UsuarioDTO.builder()
                     .username(username)
                     .password(username.concat("123"))
                     .confirmPassword("teste1234")
@@ -32,8 +32,8 @@ public enum UsuarioGenerator {
     },
     USERNAME_JA_CADASTRADO {
         @Override
-        public Usuario pojo() {
-            return Usuario.builder()
+        public UsuarioDTO pojo() {
+            return UsuarioDTO.builder()
                     .username("testeteste")
                     .password("testeteste")
                     .confirmPassword("testeteste")
@@ -41,5 +41,5 @@ public enum UsuarioGenerator {
         }
     };
 
-    public abstract Usuario pojo();
+    public abstract UsuarioDTO pojo();
 }
