@@ -18,7 +18,7 @@ public class FormFuncionarioSteps {
 
     @Quando("acesso a pagina de cadastro de funcionarios")
     public void acesso_a_pagina_de_cadastro_de_funcionarios() {
-       funcionariosPage.novoFuncionario();
+        funcionariosPage.novoFuncionario();
     }
 
     @Quando("preencho os dados do funcionario: {string}")
@@ -28,12 +28,8 @@ public class FormFuncionarioSteps {
     }
 
     @Entao("o funcionario e cadastrado com {string}:")
-    public void o_funcionario_e_cadastrado_com(String fluxo, Map<String,String> dataTable) {
-//        if (fluxo.equals("sucesso")) {
-//            Assert.assertEquals(loginPage.getSpanFormTitletext(), "Login");
-//        } else {
-//            Mensagem mensagem = MensagemGenerator.valueOf(dataTable.get("mensagem")).msg();
-//            Assert.assertEquals(page.driver.findElement(mensagem.getLocator()).getText(), mensagem.getMsg());
-//        }
+    public void o_funcionario_e_cadastrado_com(String fluxo, Map<String, String> dataTable) {
+        Mensagem mensagem = MensagemGenerator.valueOf(dataTable.get("mensagem")).msg();
+        Assert.assertEquals(funcionariosPage.driver.findElement(mensagem.getLocator()).getText(), mensagem.getMsg());
     }
 }

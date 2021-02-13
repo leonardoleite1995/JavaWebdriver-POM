@@ -2,6 +2,7 @@ package dataGenerator;
 
 import dto.Mensagem;
 import locators.CadastroUsuarioLocators;
+import locators.FuncionariosLocators;
 import locators.LoginLocators;
 
 public enum MensagemGenerator {
@@ -29,6 +30,15 @@ public enum MensagemGenerator {
             return Mensagem.builder()
                     .msg("Usuário já cadastrado")
                     .locator(new CadastroUsuarioLocators().getDivErroUsuario())
+                    .build();
+        }
+    },
+    FUNCIONARIO_CADASTRADO_COM_SUCESSO {
+        @Override
+        public Mensagem msg() {
+            return Mensagem.builder()
+                    .msg("SUCESSO! Usuário cadastrado com sucesso\n" + "×")
+                    .locator(new FuncionariosLocators().getDivSucessoCadastro())
                     .build();
         }
     };

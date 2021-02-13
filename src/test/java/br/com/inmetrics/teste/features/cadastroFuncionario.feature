@@ -13,6 +13,6 @@ Funcionalidade: Cadastro Funcionario
       | mensagem | <mensagem> |
 
     Exemplos:
-      | cenario         | fluxo   | funcionario     | usuario | senha | mensagem |
-      | funcionario clt | sucesso | FUNCIONARIO_CLT | teste   | teste |          |
-      | funcionario pj  | sucesso | FUNCIONARIO_PJ  | teste   | teste |          |
+      | cenario         | fluxo   | funcionario     | usuario | senha | mensagem                           |
+      | funcionario clt | sucesso | FUNCIONARIO_CLT | teste   | teste | FUNCIONARIO_CADASTRADO_COM_SUCESSO |
+      | funcionario pj  | sucesso | FUNCIONARIO_PJ  | teste   | teste | FUNCIONARIO_CADASTRADO_COM_SUCESSO |

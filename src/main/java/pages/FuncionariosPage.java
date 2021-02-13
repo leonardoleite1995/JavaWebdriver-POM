@@ -19,4 +19,8 @@ public class FuncionariosPage extends MainPage {
     public void novoFuncionario() {
         driver.findElement(pageLocators.getLinkNovoFuncionario()).click();
     }
+
+    public String getDivSuccessText(){
+        return driver.findElement(pageLocators.getDivSucessoCadastro()).getText();
+    }
 }
