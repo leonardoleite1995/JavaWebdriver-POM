@@ -23,6 +23,7 @@ public class LoginSteps {
         System.setProperty("webdriver.chrome.driver", "src/main/java/driver/chromedriver");
         if (MainPage.driver == null)
             MainPage.driver = (new ChromeDriver());
+        MainPage.driver.manage().window().maximize();
     }
 
     @Dado("que vou para a pagina {string}")
@@ -36,8 +37,8 @@ public class LoginSteps {
     }
 
     @Entao("o login e realizado com {string}:")
-    public void o_login_e_realizado_com_sucesso(String cenario, Map<String,String> dataTable) {
-        if (cenario.equals("sucesso")) {
+    public void o_login_e_realizado_com_sucesso(String fluxo, Map<String,String> dataTable) {
+        if (fluxo.equals("sucesso")) {
             Assert.assertTrue(funcionariosPage.getTableFuncionarios());
             funcionariosPage.sair();
         } else {
