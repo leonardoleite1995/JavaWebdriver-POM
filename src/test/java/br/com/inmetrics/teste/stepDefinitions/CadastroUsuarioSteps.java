@@ -13,7 +13,6 @@ import pages.LoginPage;
 import java.util.Map;
 
 public class CadastroUsuarioSteps {
-
     CadastroUsuarioPage page = new CadastroUsuarioPage();
     LoginPage loginPage = new LoginPage();
 
@@ -24,12 +23,12 @@ public class CadastroUsuarioSteps {
     }
 
     @Entao("o usuario e cadastrado com {string}:")
-    public void o_usuario_e_cadastrado_com(String string, Map<String,String> dataTable) {
-        if (string.equals("sucesso")) {
+    public void o_usuario_e_cadastrado_com(String fluxo, Map<String, String> dataTable) {
+        if (fluxo.equals("sucesso")) {
             Assert.assertEquals(loginPage.getSpanFormTitletext(), "Login");
-        }else{
+        } else {
             Mensagem mensagem = MensagemGenerator.valueOf(dataTable.get("mensagem")).msg();
-            Assert.assertEquals(page.driver.findElement(mensagem.getLocator()).getText(),mensagem.getMsg());
+            Assert.assertEquals(page.driver.findElement(mensagem.getLocator()).getText(), mensagem.getMsg());
         }
     }
 }
