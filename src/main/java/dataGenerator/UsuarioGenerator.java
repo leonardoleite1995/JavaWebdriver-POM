@@ -6,6 +6,26 @@ import dto.UsuarioDTO;
 import java.util.Locale;
 
 public enum UsuarioGenerator {
+    USUARIO_SENHA_INVALIDOS_LOGIN {
+        @Override
+        public UsuarioDTO pojo() {
+            return UsuarioDTO.builder()
+                    .username("teste")
+                    .password("testesttestesttestest")
+                    .confirmPassword("testesttestesttestest")
+                    .build();
+        }
+    },
+    USUARIO_SIMPLES_LOGIN {
+        @Override
+        public UsuarioDTO pojo() {
+            return UsuarioDTO.builder()
+                    .username("teste")
+                    .password("teste")
+                    .confirmPassword("teste")
+                    .build();
+        }
+    },
     USUARIO_SIMPLES {
         @Override
         public UsuarioDTO pojo() {

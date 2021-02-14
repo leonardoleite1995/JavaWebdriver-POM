@@ -1,5 +1,6 @@
 package pages;
 
+import dto.UsuarioDTO;
 import locators.LoginLocators;
 import lombok.Data;
 
@@ -8,9 +9,9 @@ public class LoginPage extends MainPage {
 
     private LoginLocators pageLocators = new LoginLocators();
 
-    public void preencheFormLogin(String usuario, String senha) {
-        driver.findElement(pageLocators.getInputUsuario()).sendKeys(usuario);
-        driver.findElement(pageLocators.getInputSenha()).sendKeys(senha);
+    public void preencheFormLogin(UsuarioDTO usuario) {
+        driver.findElement(pageLocators.getInputUsuario()).sendKeys(usuario.getUsername());
+        driver.findElement(pageLocators.getInputSenha()).sendKeys(usuario.getPassword());
         driver.findElement(pageLocators.getButtonEntrar()).click();
     }
 

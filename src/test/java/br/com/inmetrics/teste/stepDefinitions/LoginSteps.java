@@ -1,7 +1,9 @@
 package br.com.inmetrics.teste.stepDefinitions;
 
 import dataGenerator.MensagemGenerator;
+import dataGenerator.UsuarioGenerator;
 import dto.Mensagem;
+import dto.UsuarioDTO;
 import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
@@ -31,9 +33,10 @@ public class LoginSteps {
         page.openWebsite(url);
     }
 
-    @Dado("faco login:")
-    public void faco_login(Map<String, String> login) {
-        page.preencheFormLogin(login.get("usuario"), login.get("senha"));
+    @Dado("faco login: {string}")
+    public void faco_login(String login) {
+        UsuarioDTO usuario = UsuarioGenerator.valueOf(login).pojo();
+        page.preencheFormLogin(usuario);
     }
 
     @Entao("o login e realizado com {string}:")
