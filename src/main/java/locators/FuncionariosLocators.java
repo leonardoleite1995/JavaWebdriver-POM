@@ -10,4 +10,5 @@ public class FuncionariosLocators {
     private By linkNovoFuncionario = By.xpath("(//a[@class='nav-link text-uppercase font-weight-bold'])[2]");
     private By divMsgSucesso = By.cssSelector("div.alert-success");
     private By buttonDelete = By.xpath("(//button[@id='delete-btn'])[1]");
+    private By buttonEdit = By.xpath("(//button[@class='btn btn-warning'])[1]");
 }

@@ -9,16 +9,16 @@ import pages.FuncionariosPage;
 
 import java.util.Map;
 
-public class ExcluirFuncionarioSteps {
+public class EditarFuncionarioSteps {
     FuncionariosPage funcionariosPage = new FuncionariosPage();
 
-    @Quando("excluo um funcionario")
-    public void excluo_um_funcionario() {
-        funcionariosPage.excluirFuncionario();
+    @Quando("acesso a pagina de edicao de dados de funcionarios")
+    public void acesso_a_pagina_de_edicao_de_dados_de_funcionarios() {
+        funcionariosPage.editarFuncionario();
     }
 
-    @Entao("o funcionario e excluido com {string}:")
-    public void o_funcionario_e_excluido_com(String fluxo, Map<String, String> dataTable) {
+    @Entao("o funcionario e editado com {string}:")
+    public void o_funcionario_e_editado_com(String fluxo, Map<String, String> dataTable) {
         Mensagem mensagem = MensagemGenerator.valueOf(dataTable.get("mensagem")).msg();
         Assert.assertEquals(funcionariosPage.driver.findElement(mensagem.getLocator()).getText(), mensagem.getMsg());
     }

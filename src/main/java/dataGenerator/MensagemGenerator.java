@@ -50,6 +50,15 @@ public enum MensagemGenerator {
                     .locator(new FuncionariosLocators().getDivMsgSucesso())
                     .build();
         }
+    },
+    FUNCIONARIO_EDITADO_COM_SUCESSO {
+        @Override
+        public Mensagem msg() {
+            return Mensagem.builder()
+                    .msg("SUCESSO! Informações atualizadas com sucesso\n" + "×")
+                    .locator(new FuncionariosLocators().getDivMsgSucesso())
+                    .build();
+        }
     };
 
     public abstract Mensagem msg();

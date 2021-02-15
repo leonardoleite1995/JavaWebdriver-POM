@@ -12,12 +12,12 @@ public class FormFuncionarioPage extends MainPage {
     public void preencheFormFuncionario(FuncionarioDTO funcionarioDTO) {
         Select selectSexo = new Select(driver.findElement(pageLocators.getSelectSexo()));
         String tipoContratacao = funcionarioDTO.getTipoContratacao();
-        driver.findElement(pageLocators.getInputNome()).sendKeys(funcionarioDTO.getNome());
+        clearAndSetInputValue(driver.findElement(pageLocators.getInputNome()), funcionarioDTO.getNome());
         driver.findElement(pageLocators.getInputCPF()).sendKeys(funcionarioDTO.getCpf());
         selectSexo.selectByVisibleText(funcionarioDTO.getSexo());
-        driver.findElement(pageLocators.getInputAdmissao()).sendKeys(funcionarioDTO.getAdmissao());
-        driver.findElement(pageLocators.getInputCargo()).sendKeys(funcionarioDTO.getCargo());
-        driver.findElement(pageLocators.getInputSalario()).sendKeys(funcionarioDTO.getSalario().toString());
+        clearAndSetInputValue(driver.findElement(pageLocators.getInputAdmissao()), funcionarioDTO.getAdmissao());
+        clearAndSetInputValue(driver.findElement(pageLocators.getInputCargo()), funcionarioDTO.getCargo());
+        clearAndSetInputValue(driver.findElement(pageLocators.getInputSalario()), funcionarioDTO.getSalario());
         if (tipoContratacao.equals("clt"))
             driver.findElement(pageLocators.getInputCLT()).click();
         else

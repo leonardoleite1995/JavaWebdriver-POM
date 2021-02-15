@@ -18,7 +18,7 @@ public class FormFuncionarioSteps {
 
     @Quando("acesso a pagina de cadastro de funcionarios")
     public void acesso_a_pagina_de_cadastro_de_funcionarios() {
-        funcionariosPage.novoFuncionario();
+        funcionariosPage.cadastrarFuncionario();
     }
 
     @Quando("preencho os dados do funcionario: {string}")

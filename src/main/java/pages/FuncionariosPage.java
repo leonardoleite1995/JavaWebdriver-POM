@@ -16,7 +16,7 @@ public class FuncionariosPage extends MainPage {
         driver.findElement(pageLocators.getLinkSair()).click();
     }
 
-    public void novoFuncionario() {
+    public void cadastrarFuncionario() {
         driver.findElement(pageLocators.getLinkNovoFuncionario()).click();
     }
 
@@ -24,7 +24,11 @@ public class FuncionariosPage extends MainPage {
         return driver.findElement(pageLocators.getDivMsgSucesso()).getText();
     }
 
-    public void excluiFuncionario() {
+    public void excluirFuncionario() {
         driver.findElement(pageLocators.getButtonDelete()).click();
+    }
+
+    public void editarFuncionario(){
+        driver.findElement(pageLocators.getButtonEdit()).click();
     }
 }
