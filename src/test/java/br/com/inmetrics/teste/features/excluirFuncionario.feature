@@ -1,4 +1,5 @@
 #language: pt
+@funcionario @excluirFuncionario
 Funcionalidade: Excluir Funcionario
 
   Esquema do Cenario: Excluir Funcionario - <cenario>

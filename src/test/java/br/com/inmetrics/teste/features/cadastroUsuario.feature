@@ -1,4 +1,5 @@
 #language: pt
+@usuario
 Funcionalidade: Cadastro Usuario
 
   Esquema do Cenario: Cadastro Usuario - <cenario>

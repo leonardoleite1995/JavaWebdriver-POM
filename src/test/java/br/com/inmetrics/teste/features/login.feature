@@ -1,6 +1,7 @@
 #language: pt
+@login @usuario
 Funcionalidade: Login
-
+  @login
   Esquema do Cenario: Login - <cenario>
 
     Dado que vou para a pagina "https://inm-test-app.herokuapp.com/accounts/login/"

@@ -1,4 +1,5 @@
 #language: pt
+@funcionario @editarFuncionario
 Funcionalidade: Editar Funcionario
 
   Esquema do Cenario: Editar Funcionario - <cenario>

@@ -1,4 +1,5 @@
 #language: pt
+@funcionario @cadastrarFuncionario
 Funcionalidade: Cadastro Funcionario
 
   Esquema do Cenario: Cadastro Funcionario - <cenario>
