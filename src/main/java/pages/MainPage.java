@@ -2,7 +2,7 @@ package pages;
 
 import lombok.Data;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebElement;
 
 @Data
 public class MainPage {
@@ -10,5 +10,10 @@ public class MainPage {
 
     public void openWebsite(String url) {
         driver.get(url);
+    }
+
+    public void clearAndSetInputValue(WebElement element, String value) {
+        element.clear();
+        element.sendKeys(value);
     }
 }
