@@ -38,7 +38,16 @@ public enum MensagemGenerator {
         public Mensagem msg() {
             return Mensagem.builder()
                     .msg("SUCESSO! Usuário cadastrado com sucesso\n" + "×")
-                    .locator(new FuncionariosLocators().getDivSucessoCadastro())
+                    .locator(new FuncionariosLocators().getDivMsgSucesso())
+                    .build();
+        }
+    },
+    FUNCIONARIO_EXCLUIDO_COM_SUCESSO {
+        @Override
+        public Mensagem msg() {
+            return Mensagem.builder()
+                    .msg("SUCESSO! Funcionário removido com sucesso\n" + "×")
+                    .locator(new FuncionariosLocators().getDivMsgSucesso())
                     .build();
         }
     };

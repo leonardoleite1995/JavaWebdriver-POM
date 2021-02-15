@@ -20,7 +20,11 @@ public class FuncionariosPage extends MainPage {
         driver.findElement(pageLocators.getLinkNovoFuncionario()).click();
     }
 
-    public String getDivSuccessText(){
-        return driver.findElement(pageLocators.getDivSucessoCadastro()).getText();
+    public String getDivSuccessText() {
+        return driver.findElement(pageLocators.getDivMsgSucesso()).getText();
+    }
+
+    public void excluiFuncionario() {
+        driver.findElement(pageLocators.getButtonDelete()).click();
     }
 }
